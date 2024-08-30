@@ -125,7 +125,7 @@ This repository contains Terraform configuration files for setting up a basic AW
 Make sure to replace placeholder values with actual values specific to your environment before applying the configuration.
 
 # =====================================================================
-# steps for accessing the EC2 instance and RDS MariaDB:
+# Steps for accessing the EC2 instance and RDS MariaDB:
 
 # Terraform Deployment and Access Instructions
 
