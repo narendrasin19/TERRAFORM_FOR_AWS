@@ -11,7 +11,7 @@ This project provides a basic setup for provisioning an AWS EC2 instance using T
 - **terraform.tfstate.backup**: A backup of the last known state, useful for state recovery.
 
 ## Prerequisites
-- [Terraform](https://www.terraform.io/downloads) installed on your local machine.
+- Terraform installed on your local machine.
 - An AWS account with IAM user credentials that have the necessary permissions to create EC2 instances.
 - AWS CLI installed and configured (optional but recommended for managing AWS resources).
 
@@ -19,7 +19,6 @@ This project provides a basic setup for provisioning an AWS EC2 instance using T
 
 ### 1. Clone the Repository
 Clone this repository to your local machine:
-
 git clone https://github.com/your-username/Terraform_Basics.git
 cd Terraform_Basics
 ==============================================================================
@@ -136,7 +135,7 @@ output "instance_public_ip" {
 }
 
 Summary
-Initialize with terraform init to set up your environment.
+Initialize with terraform init to set up your environment. 
 Validate with terraform validate to ensure correct configuration.
 Plan with terraform plan to review proposed changes.
 Apply with terraform apply to deploy the infrastructure.
