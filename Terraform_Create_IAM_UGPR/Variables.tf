@@ -2,7 +2,7 @@
 variable "AWS_ACCESS_KEY" {
   description = "AWS Access Key ID for authentication."
   type        = string
-  default     = "AKIASMSIZOF42P2VUDSZ"  # Default access key (should be secured)
+  default     = "xxxxxxxxxxxx"  # Default access key (should be secured)
 }
 
 # Variable for AWS Secret Key (keep this value secure, usually provided at runtime or through environment variables)
