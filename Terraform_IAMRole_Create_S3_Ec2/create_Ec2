@@ -1,0 +1,19 @@
+# 1. Define an AWS Key Pair for SSH Access
+resource "aws_key_pair" "levelup_key" {
+  key_name   = "levelup_key"                      # 1.1. Name of the SSH key pair
+  public_key = file(var.PATH_TO_PUBLIC_KEY)        # 1.2. Path to the public key file
+}
+
+# 2. Create an AWS EC2 Instance with IAM Role and Key Pair
+resource "aws_instance" "MyFirstInstance" {
+  ami                  = lookup(var.AMIS, var.AWS_REGION)  # 2.1. AMI ID based on the specified region
+  instance_type        = "t2.micro"                        # 2.2. EC2 instance type
+  availability_zone    = "us-east-2a"                      # 2.3. Availability zone for the instance
+  key_name             = aws_key_pair.levelup_key.key_name # 2.4. SSH key pair name for accessing the instance
+
+  iam_instance_profile = aws_iam_instance_profile.s3_levelupbucket_role_instanceprofile.name  # 2.5. IAM instance profile to attach
+
+  tags = {
+    Name = "custom_instance"  # 2.6. Tag for identifying the instance
+  }
+}
