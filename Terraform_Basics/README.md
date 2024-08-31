@@ -19,7 +19,7 @@ This project provides a basic setup for provisioning an AWS EC2 instance using T
 
 ### 1. Clone the Repository
 Clone this repository to your local machine:
-```bash
+
 git clone https://github.com/your-username/Terraform_Basics.git
 cd Terraform_Basics
 ==============================================================================
